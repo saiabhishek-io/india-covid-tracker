@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<title>Covid Tracker India</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<div class="jumbotron text-center mdb-color lighten-2 white-text mx-2 mb-5" style="background-image: url(https://webgradients.com/public/webgradients_png/051%20February%20Ink.png);">
+
+<h1 class="display-4">Live Covid-19 Tracker (India)</h1>
+
+<p class="my-4 h6">Powerful and real time online Covid Tracker. Dataset gets updated every 20 hours.</p>
+<p class="my-4 h6">Source: Ministry of Home Affairs, Government of India.</p>
+
+
+<div class="row d-flex justify-content-center">
+  <div class="col-xl-7 pb-2">
+<p class="card-text">A simple yet powerful Web Application built using Python and Flask.
+To start using our platform, scroll down for the data! </p>
+
+<div class="pt-2">
+</div>
+
+  </div>
+</div>
+
+<hr class="my-4 rgba-white-light">
+
+<div class="row d-flex justify-content-center">
+<div class="alert alert-primary" role="alert">
+  Alert: Current dataset only available for India. The developers are working on a state wise dataset.
+</div>
+</div>
+<div class="row d-flex justify-content-center">
+<div class="alert alert-success" role="alert">
+  Success! Current dataset has been updated. Last Update: {{time}}.
+</div>
+</div>
+
+<hr class="my-4 rgba-white-light">
+
+<div class="card-deck">
+  <div class="card bg-warning">
+    <div class="card-body text-center">
+      <p class="card-text">Total Cases:</p>
+      <p class="card-text">{{cases}}</p>
+    </div>
+  </div>
+  <div class="card bg-danger">
+    <div class="card-body text-center">
+      <p class="card-text">Total Deaths:</p>
+      <p class="card-text">{{death}}</p>
+    </div>
+  </div>
+  <div class="card bg-success">
+    <div class="card-body text-center">
+      <p class="card-text">Total Recoveries:</p>
+      <p class="card-text">{{recovery}}</p>
+    </div>
+  </div>
+</div>
+
+<hr class="my-4 rgba-white-light">
+<hr class="my-4 rgba-white-light">
+
+<div class= "card-deck">
+
+<div class="card" style="width: 18rem;">
+<img class="card-img-top img-fluid" src="{{url_for('static', filename='d.jpg')}}" alt="Card image cap">
+<div class="card-body">
+  <p class="card-title">Critical Cases in ICU: {{mortality}} </p>
+</div>
+</div>
+
+<div class="card" style="width: 18rem;">
+<img class="card-img-top img-fluid" src="{{url_for('static', filename='casesinc.jpg')}}" alt="Card image cap">
+<div class="card-body">
+  <p class="card-title">Total Cases Recorded Today: {{case_today}}</p>
+
+</div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+<img class="card-img-top img-fluid" src="{{url_for('static', filename='doc.jpg')}}" alt="Card image cap">
+<div class="card-body">
+<p class="card-title">Total Cases being Treated: {{cases_treated}}</p>
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+<footer class="page-footer font-small indigo">
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+<a href="#"> Sai Abhishek & Krishna Prakash</a>
+</div>
+</footer>
+
+</body>
+
+</html>

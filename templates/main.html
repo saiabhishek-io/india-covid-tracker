@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<div class="jumbotron text-center mdb-color lighten-2 white-text mx-2 mb-5" style="background-image: url(https://webgradients.com/public/webgradients_png/022%20Morpheus%20Den.png);">
+
+<h2 class="card-title h2">Showing Results for: {{location}}</h2>
+
+<p class="my-4 h6">Powerful and real time online Covid Tracker</p>
+
+
+<hr class="my-4 rgba-white-light">
+
+
+<div class= "card-deck">
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{url_for('static', filename='plot1.png')}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Total Cases: {{cases}}</h5>
+
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="{{url_for('static', filename='plot1.png')}}" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">Total Recoveries: {{recovery}}</h5>
+</div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="{{url_for('static', filename='plot1.png')}}" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">Total Deaths: {{death}}</h5>
+</div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+<img class="card-img-top" src="{{url_for('static', filename='risk.jpg')}}" alt="Card image cap">
+<div class="card-body">
+  <h5 class="card-title">Risk Factor: {{dl}} </h5>
+</div>
+</div>
+
+
+</div>
+
+</div>
+
+
+<hr class="my-4 rgba-white-light">
+
+
+<footer class="page-footer font-small indigo">
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+<a href="#"> Sai Abhishek & Krishna Prakash</a>
+</div>
+</footer>
+
+  </body>
+</html>
